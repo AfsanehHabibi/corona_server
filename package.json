@@ -1,0 +1,17 @@
+{
+  "name": "coronaserver",
+  "version": "1.0.0",
+  "description": "HW1 Internet Engineering",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Afsaneh Habibi",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
