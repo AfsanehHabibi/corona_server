@@ -7,6 +7,13 @@ const app = express();
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json());
 app.use(cors());
+let map;
+//
+///infrormation load
+// $.getJSON("./res/init.json", function(data){
+//     map=data;
+// }
+// );
 //
 app.use("/",testAPIRouter);
 //
