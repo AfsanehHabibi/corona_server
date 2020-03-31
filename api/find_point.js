@@ -1,18 +1,21 @@
 let variable =require('./../index');
 var express = require("express");
 var router = express.Router();
-let booleanPointInPolygon = require('@turf/boolean-point-in-polygon');
 var inside = require('point-in-polygon')
 router.get("/gis/testpoint",function(req,res){
+      if(!req.query.lat || !req.query.long){
+            res.status(400);
+            res.send("bad request");
+      }else{
       let lat=req.query.lat;
       let long=req.query.long;
-      console.debug([long,lat]);
-      [(variable.map.features)].forEach(element => {
-            //let result= turf([long,lat],element);
-            //booleanPointInPolygon([lat,long], element);
-            //console.debug(turf([lat,long], element));
-            console.debug(inside([long,lat],element))
+      let point=[parseFloat(long),parseFloat(lat)];
+      let result=[];
+      (variable.map.features).forEach(element => {
+            if(inside(point,element.geometry.coordinates[0]))
+                  result.push(element.properties.name);
       });
-      res.json({massage:"see"})
+      res.json({"polygons":result});
+}
 })
 module.exports = router;
