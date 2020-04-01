@@ -1,0 +1,152 @@
+GET  http://localhost:9000/gis/testpoint?lat=34&long=54 HTTP/2.0
+
+###
+PUT http://localhost:9000/gis/addpolygon HTTP/2.0
+content-type: application/json
+
+{
+    "type": "Feature",
+    "properties": {
+    "name": "تهران"
+    },
+    "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+        [
+        [
+            53.514404296875,
+            34.59704151614417
+        ],
+        [
+            51.416015625,
+            34.854382885097905
+        ],
+        [
+            51.6851806640625,
+            33.82023008524739
+        ],
+        [
+            53.514404296875,
+            34.59704151614417
+        ]
+        ]
+    ]
+    }
+}
+###
+PUT http://localhost:9000/gis/addpolygon HTTP/2.0
+content-type: application/json
+
+{
+    "type": "Feature",
+    "properties": {
+    "name": "false"
+    },
+    "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+        [
+        [
+            53.514404296875,
+            34.59704151614417
+        ]
+    ]]
+    }
+}
+###
+PUT http://localhost:9000/gis/addpolygon HTTP/2.0
+content-type: application/json
+
+{
+    "type": "Feature",
+    "properties": {
+    "name": "تهران"
+    },
+    "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+        [
+            53.514404296875,
+            34.59704151614417
+        ],
+        [
+            51.416015625,
+            34.854382885097905
+        ],
+        [
+            51.6851806640625,
+            33.82023008524739
+        ],
+        [
+            53.514404296875,
+            34.59704151614417
+        ]
+        ]
+    }
+}
+###
+PUT http://localhost:9000/gis/addpolygon HTTP/2.0
+content-type: application/json
+
+{
+    "type": "Feature",
+    "properties": {
+    "name": "تهران"
+    },
+    "geometry": {
+    "type": "Poly",
+    "coordinates": [
+        [
+        [
+            53.514404296875,
+            34.59704151614417
+        ],
+        [
+            51.416015625,
+            34.854382885097905
+        ],
+        [
+            51.6851806640625,
+            33.82023008524739
+        ],
+        [
+            53.514404296875,
+            34.59704151614417
+        ]
+        ]
+    ]
+    }
+}
+###
+PUT http://localhost:9000/gis/addpolygon HTTP/2.0
+content-type: application/json
+
+{
+    "type": "Feature",
+    "properties": {
+        "family":"weird"
+    },
+    "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+        [
+        [
+            53.514404296875,
+            34.59704151614417
+        ],
+        [
+            51.416015625,
+            34.854382885097905
+        ],
+        [
+            51.6851806640625,
+            33.82023008524739
+        ],
+        [
+            53.514404296875,
+            34.59704151614417
+        ]
+        ]
+    ]
+    }
+}
