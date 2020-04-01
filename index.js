@@ -15,5 +15,6 @@ app.use(morgan('dev'));
 exports.map=map;
 app.use("/",addPolygonAPIRouter);
 app.use("/",findPointAPIRouter);
+app.use("/",testAPIRouter);
 app.set('port',process.env.PORT );
 app.listen(app.get('port'));
