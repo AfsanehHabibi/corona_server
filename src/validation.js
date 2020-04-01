@@ -1,4 +1,4 @@
-export function validateGeoJson(Geojson){
+function validateGeoJson(Geojson){
     if(!Geojson.type || Geojson.type != "Feature")
         return false;
     if(!Geojson.properties || !Geojson.properties.name)
@@ -12,3 +12,4 @@ export function validateGeoJson(Geojson){
         return false;
     return true;
 }
+module.exports=validateGeoJson;
