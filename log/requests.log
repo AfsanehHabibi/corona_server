@@ -1,0 +1,4 @@
+[0mPUT /gis/addpolygon [32m200[0m 87.422 ms - 286[0m
+[0mGET /gis/testpoint?lat=34&long=54 [32m200[0m 3.576 ms - 15[0m
+[0mPUT /gis/addpolygon [32m200[0m 21.912 ms - 286[0m
+[0mPUT /gis/addpolygon [32m200[0m 13.854 ms - 531[0m
