@@ -4,7 +4,7 @@ var router = express.Router();
 var inside = require('point-in-polygon')
 router.get("/gis/testpoint",function(req,res){
       if(!req.query.lat || !req.query.long){
-            res.status(400).json({result:"invalid"});
+            res.status(400).json({message:"bad request"});
       }else{
       let lat=req.query.lat;
       let long=req.query.long;
